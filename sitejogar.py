@@ -17,7 +17,7 @@ mensagens = {
 
 # Quando a pessoa escolhe "Sim", pedimos para digitar o jogo
 if resposta == "Sim":
-    jogo = st.text_input("O que você deseja jogar?")
+    jogo = st.text_input("O que vamos jogar hoje?")
 
     if jogo:
         # Atualizar a mensagem com o nome do jogo
@@ -25,7 +25,7 @@ if resposta == "Sim":
 
 # Quando a pessoa escolhe "Não sei", pedimos para escrever uma mensagem
 if resposta == "Não sei":
-    mensagem_nao_sei = st.text_area("Escreva o que está pensando...", height=100)
+    mensagem_nao_sei = st.text_area("Escreva o motivo, se quiser...", height=100)
     if mensagem_nao_sei:
         # Substitui a mensagem padrão de "Não sei" com a mensagem personalizada
         mensagens["Não sei"] = f"Talvez... ainda tô decidindo. 🤔 -> Motivo: {mensagem_nao_sei}."
